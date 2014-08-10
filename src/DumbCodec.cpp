@@ -216,18 +216,18 @@ void* Init(const char* strFile, unsigned int filecache, int* channels,
       memdata.ptr[0] == 'I' && memdata.ptr[1] == 'M' &&
       memdata.ptr[2] == 'P' && memdata.ptr[3] == 'M')
   {
-    result->module = dumb_read_it_quick(f);
+    result->module = dumb_read_it(f);
   }
   else if (memdata.size >= 17 &&
            memcmp(memdata.ptr, "Extended Module: ", 17) == 0)
   {
-    result->module = dumb_read_xm_quick(f);
+    result->module = dumb_read_xm(f);
   }
   else if (memdata.size >= 0x30 &&
            memdata.ptr[0x2C] == 'S' && memdata.ptr[0x2D] == 'C' &&
            memdata.ptr[0x2E] == 'R' && memdata.ptr[0x2F] == 'M')
   {
-    result->module = dumb_read_s3m_quick(f);
+    result->module = dumb_read_s3m(f);
   }
   else
   {
