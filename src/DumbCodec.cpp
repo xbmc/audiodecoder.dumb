@@ -249,7 +249,7 @@ void* Init(const char* strFile, unsigned int filecache, int* channels,
   *channels = 2;
   *samplerate = 48000;
   *bitspersample = 16;
-  *totaltime = duh_get_length(result->module);
+  *totaltime = duh_get_length(result->module)/65536*1000;
   *format = AE_FMT_S16NE;
    static enum AEChannel map[3] = { AE_CH_FL, AE_CH_FR , AE_CH_NULL};
 
