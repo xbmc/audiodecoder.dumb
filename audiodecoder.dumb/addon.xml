@@ -5,10 +5,10 @@
   name="Modplug Audio Decoder"
   provider-name="spiff">
   <requires>
-    <import addon="xbmc.audiodecoder" version="1.0.0"/>
+    <import addon="kodi.audiodecoder" version="1.0.0"/>
   </requires>
   <extension
-    point="xbmc.audiodecoder"
+    point="kodi.audiodecoder"
     name="dumb"
     extension=".it|.xm|.s3m"
     library_linux="audiodecoder.dumb.so"/>
