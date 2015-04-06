@@ -113,7 +113,7 @@ set(INSTALL_HEADERS
     ../include/dumb.h
 )
 
-add_library(dumb ${SOURCES})
+add_library(dumb STATIC ${SOURCES})
 set_target_properties(dumb PROPERTIES DEBUG_POSTFIX d)
 
 #INSTALL(FILES ${INSTALL_HEADERS} DESTINATION include/dumb/)
