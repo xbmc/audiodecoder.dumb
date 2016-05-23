@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="audiodecoder.dumb"
-  version="1.0.0"
+  version="1.1.0"
   name="Modplug Audio Decoder"
   provider-name="spiff">
   <requires>
@@ -11,10 +11,10 @@
     point="kodi.audiodecoder"
     name="dumb"
     extension=".it|.xm|.s3m"
-    library_linux="audiodecoder.dumb.so"/>
+    library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">DUMB Audio Decoder</summary>
     <description lang="en">DUMB Audio Decoder</description>
-    <platform>all</platform>
+    <platform>@PLATFORM@</platform>
   </extension>
 </addon>
