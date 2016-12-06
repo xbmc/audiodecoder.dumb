@@ -2,7 +2,7 @@
 <addon
   id="audiodecoder.dumb"
   version="1.1.0"
-  name="Modplug Audio Decoder"
+  name="DUMB Audio Decoder"
   provider-name="spiff">
   <requires>
     <import addon="kodi.audiodecoder" version="1.0.0"/>
