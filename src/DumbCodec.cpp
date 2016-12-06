@@ -181,7 +181,9 @@ static DUMBFILE_SYSTEM mem_dfs = {
   &dumbfile_mem_skip,
   &dumbfile_mem_getc,
   &dumbfile_mem_getnc,
-  NULL // close
+  NULL, // close
+  &dumbfile_mem_seek,
+  &dumbfile_mem_get_size
 };
 
 
