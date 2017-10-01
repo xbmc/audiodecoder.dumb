@@ -14,7 +14,7 @@ if(NOT DUMB_FOUND)
   set(DUMB_LIBRARIES dumb)
   set(DUMB_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/lib/dumb/include)
 endif()
-include_directories(${KODI_INCLUDE_DIR}
+include_directories(${KODI_INCLUDE_DIR}/..
                     ${DUMB_INCLUDE_DIRS})
 
 set(DUMB_SOURCES src/DumbCodec.cpp)
