@@ -1,18 +1,6 @@
 cmake_minimum_required(VERSION 2.6)
 project(libdumb C)
 
-include(CheckCXXCompilerFlag)
-check_cxx_compiler_flag(-msse HAS_SSE)
-if(HAS_SSE)
-  set(CMAKE_C_FLAGS "-Wall -DDUMB_DECLARE_DEPRECATED -D_USE_SSE -msse -Wno-unused-variable -Wno-unused-but-set-variable -fPIC")
-else()
-  set(CMAKE_C_FLAGS "-Wall -DDUMB_DECLARE_DEPRECATED -Wno-unused-variable -Wno-unused-but-set-variable -fPIC")
-endif()
-set(CMAKE_C_FLAGS_DEBUG "-ggdb -DDEBUGMODE=1 -D_DEBUG")
-set(CMAKE_C_FLAGS_RELEASE "-ffast-math -O2 -DNDEBUG")
-set(CMAKE_C_FLAGS_RELWITHDEBINFO "-ffast-math -g -O2 -DNDEBUG")
-set(CMAKE_C_FLAGS_MINSIZEREL "-ffast-math -Os -DNDEBUG")
-
 link_directories(${CMAKE_CURRENT_BINARY_DIR})
 include_directories(../include/)
 
@@ -108,8 +96,18 @@ set(INSTALL_HEADERS
     ../include/dumb.h
 )
 
+set(CMAKE_POSITION_INDEPENDENT_CODE 1)
 add_library(dumb STATIC ${SOURCES})
 set_target_properties(dumb PROPERTIES DEBUG_POSTFIX d)
+
+include(CheckCXXCompilerFlag)
+check_cxx_compiler_flag(-msse HAS_SSE)
+if(HAS_SSE)
+  target_compile_definitions(dumb PUBLIC -DDUMB_DECLARE_DEPRECATED -D_USE_SSE)
+  target_compile_options(dumb PUBLIC -msse)
+else()
+  target_compile_definitions(dumb PUBLIC -DDUMB_DECLARE_DEPRECATED)
+endif()
 
 # Make sure the dylib install name path is set on OSX so you can include dumb in app bundles
 IF(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
