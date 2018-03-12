@@ -43,6 +43,7 @@
  */
 
 #include <math.h>
+#include <limits.h>
 #include "dumb.h"
 
 #include "internal/resampler.h"
