@@ -1,0 +1,21 @@
+Source: kodi-audiodecoder-dumb
+Priority: extra
+Maintainer: Arne Morten Kvarving <cptspiff@gmail.com>
+Build-Depends: debhelper (>= 8.0.0), cmake, kodi-addon-dev,
+               libkodiplatform-dev (>= 17.1.0)
+Standards-Version: 3.9.6
+Section: libs
+
+Package: kodi-audiodecoder-dumb
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: DUMB audio decoder for Kodi
+  DUMB audio decoder for Kodi
+
+Package: kodi-audiodecoder-dumb-dbg
+Section: debug
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: debug symbols for DUMB audio decoder for Kodi
+  debug symbols for DUMB audio decoder for Kodi
