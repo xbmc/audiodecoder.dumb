@@ -98,8 +98,7 @@ static DUMBFILE_SYSTEM mem_dfs = {
 
 }
 
-class CDumbCodec : public kodi::addon::CInstanceAudioDecoder,
-                   public kodi::addon::CAddonBase
+class ATTRIBUTE_HIDDEN CDumbCodec : public kodi::addon::CInstanceAudioDecoder
 {
 public:
   CDumbCodec(KODI_HANDLE instance) : 
