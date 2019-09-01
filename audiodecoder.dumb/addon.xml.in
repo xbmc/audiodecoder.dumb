@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="audiodecoder.dumb"
-  version="2.0.0"
+  version="2.0.1"
   name="DUMB Audio Decoder"
   provider-name="spiff">
   <requires>@ADDON_DEPENDS@</requires>
@@ -11,8 +11,14 @@
     extension=".it|.xm|.s3m"
     library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">DUMB Audio Decoder</summary>
-    <description lang="en">DUMB Audio Decoder</description>
+    <summary lang="en">Dynamic Universal Music Bibliotheque</summary>
+    <description lang="en">DUMB is a module audio renderer library. It reads module files and outputs audio that can be dumped to the actual audio playback library.
+
+On Kodi Supports playback of the following module formats:
+- IT (Impulse Tracker)
+- XM (Fasttracker II)
+- S3M (Scream Tracker 3)
+</description>
     <platform>@PLATFORM@</platform>
   </extension>
 </addon>
