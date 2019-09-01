@@ -26,14 +26,18 @@ obj-x86_64-linux-gnu/
 # KDevelop 4
 *.kdev4
 
-# Visual Studio
-.vs/
-
 # gedit
 *~
 
 # CLion
 /.idea
 
-# clion
-.idea/
+# commonly used editors
+# vim
+*.swp
+
+# to prevent add after a "git format-patch VALUE" and "git add ." call
+/*.patch
+
+# to prevent add if project code opened by Visual Studio over CMake file
+.vs/
