@@ -14,11 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-        echo "Hello World"
-        dir
-        cd ..
-        dir
-        set
         git clone --branch master --depth=1 https://github.com/xbmc/xbmc.git kodi
         cd $(addon)
         mkdir build
