@@ -15,9 +15,9 @@ jobs:
     - uses: actions/checkout@v2
     - run: |
         git clone --branch master --depth=1 https://github.com/xbmc/xbmc.git kodi
-        cd ${{ addon }}
+        cd $addon
         mkdir build
         cd build
-        mkdir "definition/${{ addon }}"
-        echo ---> ${{ addon }}
-        echo ${{ addon }} . . > definition/${{ addon }}/${{ addon }}.txt
+        mkdir "definition/$addon"
+        echo ---> $addon
+        echo $addon . . > definition/$addon/$addon.txt
