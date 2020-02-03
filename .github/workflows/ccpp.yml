@@ -1,6 +1,7 @@
-name: C/C++ CI
+name: audiodecoder.dumb build
 
-on: [push]
+on:
+  pull_request
 
 jobs:
   build:
@@ -10,6 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
+        echo "Hello World"
         dir
         cd ..
         dir
