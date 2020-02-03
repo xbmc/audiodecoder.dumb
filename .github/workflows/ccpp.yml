@@ -12,19 +12,13 @@ jobs:
     - uses: actions/checkout@v2
     - run: |
         echo "Hello World"
-        echo "GITHUB_WORKSPACE $(GITHUB_WORKSPACE)"
-        #echo "GITHUB_ACTION $(GITHUB_ACTION)"
-        echo "HOME $HOME"
-        #echo "GITHUB_REPOSITORY $(GITHUB_REPOSITORY)"
-        #echo "GITHUB_EVENT_NAME $(GITHUB_EVENT_NAME)"
-        #echo "GITHUB_WORKSPACE $(GITHUB_WORKSPACE)"
         dir
         cd ..
         dir
         git clone --branch master --depth=1 https://github.com/xbmc/xbmc.git kodi
-        #cd $(Build.SourcesDirectory)
-        #mkdir build
-        #cd build
-        #mkdir "definition/$(app_id)"
-        #echo $(app_id) . . > definition/$(app_id)/$(app_id).txt
+        cd audiodecoder.dumb #$(Build.SourcesDirectory)
+        mkdir build
+        cd build
+        mkdir "definition/$(app_id)"
+        echo $(app_id) . . > definition/$(app_id)/$(app_id).txt
         #mklink /J "$(Pipeline.Workspace)/$(app_id)" "$(Build.SourcesDirectory)"
