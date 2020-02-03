@@ -1,5 +1,8 @@
 name: audiodecoder.dumb build
 
+env:
+  addon: audiodecoder.dumb
+
 on:
   pull_request
 
@@ -15,10 +18,11 @@ jobs:
         dir
         cd ..
         dir
+        set
         git clone --branch master --depth=1 https://github.com/xbmc/xbmc.git kodi
-        cd audiodecoder.dumb #$(Build.SourcesDirectory)
+        cd $(addon)
         mkdir build
         cd build
-        mkdir "definition/$(app_id)"
-        echo $(app_id) . . > definition/$(app_id)/$(app_id).txt
+        mkdir "definition/$(addon)"
+        echo $(addon) . . > definition/$(addon)/$(addon).txt
         #mklink /J "$(Pipeline.Workspace)/$(app_id)" "$(Build.SourcesDirectory)"
