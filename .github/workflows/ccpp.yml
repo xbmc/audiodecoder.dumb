@@ -1,4 +1,4 @@
-name: audiodecoder.dumb build
+name: Binary addon build
 
 on:
   pull_request
@@ -7,6 +7,10 @@ jobs:
   build:
     name: Windows
     runs-on: windows-2019
+    env:
+      addon: audiodecoder.dumb
+      GENERATOR: "Visual Studio 15 2017"
+      SYSTEM_VERSION: "10.0.17763.0"
 
     strategy:
       matrix:
@@ -28,7 +32,3 @@ jobs:
         mkdir "definition/$addon"
         echo ---> $addon
         echo $addon . . > definition/$addon/$addon.txt
-        env:
-          addon: audiodecoder.dumb
-          GENERATOR: "Visual Studio 15 2017"
-          SYSTEM_VERSION: "10.0.17763.0"
