@@ -1,13 +1,14 @@
-name: Greeting from Mona
+name: Binary addon build
 
-on: push
+on: pull_request
 
 jobs:
   my-job:
     name: My Job
-    runs-on: ubuntu-latest
+    runs-on: windows-2019
+
     steps:
-    - name: Print a greeting
+    - name: Create addon
       env:
         MY_VAR: Hi there! My name is
         FIRST_NAME: Mona
