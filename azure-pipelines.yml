@@ -1,6 +1,17 @@
 variables:
   app_id: 'audiodecoder.dumb'
 
+trigger:
+  branches:
+    include:
+    - Leia
+    - releases/*
+  paths:
+    include:
+    - '*'
+    exclude:
+    - 'debian/*'
+
 jobs:
   - job: Windows
 
