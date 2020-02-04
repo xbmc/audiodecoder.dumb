@@ -22,13 +22,14 @@ jobs:
     - name: Create addon
       env:
         ADDON: audiodecoder.dumb
-        GENERATOR: "Visual Studio 15 2017"
-        SYSTEM_VERSION: "10.0.17763.0"
+        GENERATOR: Visual Studio 15 2017
+        SYSTEM_VERSION: 10.0.17763.0
       run: |
         git clone --branch master --depth=1 https://github.com/xbmc/xbmc.git kodi
-        cd $addon
+        cd $ADDON
         mkdir build
         cd build
         mkdir "definition/$ADDON"
-        echo ---> $ADDON
+        echo -ADDON--> "$ADDON"
+        echo -GENERATOR--> "$GENERATOR"
         echo $ADDON . . > definition/$ADDON/$ADDON.txt
