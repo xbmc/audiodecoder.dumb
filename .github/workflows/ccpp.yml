@@ -17,6 +17,6 @@ jobs:
       run: |
         echo ${MY_VAR} 
         echo %FIRST_NAME%
-        echo ${{ MIDDLE_NAME }}
+        #echo ${{ MIDDLE_NAME }}
         echo $(LAST_NAME).
 
