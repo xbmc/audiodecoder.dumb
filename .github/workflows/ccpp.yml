@@ -1,35 +1,18 @@
-name: Binary addon build
+name: Greeting from Mona
 
-on:
-  pull_request
+on: push
 
 jobs:
-  build:
-    name: Windows
-    runs-on: windows-2019
-
-    strategy:
-      matrix:
-        ARCHITECTURE: [Win32, x64, ARM, ARM64]
-        SYSTEM_NAME: [Windows, WindowsStore]
-        exclude:
-          - SYSTEM_NAME: Windows
-            ARCHITECTURE: ARM
-          - SYSTEM_NAME: Windows
-            ARCHITECTURE: ARM64
-
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
     steps:
-    - name: Create addon
+    - name: Print a greeting
       env:
-        ADDON: audiodecoder.dumb
-        GENERATOR: Visual Studio 15 2017
-        SYSTEM_VERSION: 10.0.17763.0
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: Mona
+        MIDDLE_NAME: The
+        LAST_NAME: Octocat
       run: |
-        git clone --branch master --depth=1 https://github.com/xbmc/xbmc.git kodi
-        cd $ADDON
-        mkdir build
-        cd build
-        mkdir "definition/$ADDON"
-        echo -ADDON--> "$ADDON"
-        echo -GENERATOR--> "$GENERATOR"
-        echo $ADDON . . > definition/$ADDON/$ADDON.txt
+        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+
