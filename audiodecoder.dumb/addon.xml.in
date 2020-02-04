@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="audiodecoder.dumb"
-  version="2.0.1"
+  version="2.0.2"
   name="DUMB Audio Decoder"
   provider-name="spiff">
   <requires>@ADDON_DEPENDS@</requires>
@@ -17,8 +17,12 @@
 On Kodi Supports playback of the following module formats:
 - IT (Impulse Tracker)
 - XM (Fasttracker II)
-- S3M (Scream Tracker 3)
-</description>
+- S3M (Scream Tracker 3)</description>
     <platform>@PLATFORM@</platform>
+    <license>GPL-2.0</license>
+    <source>https://github.com/xbmc/audiodecoder.dumb</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
   </extension>
 </addon>
