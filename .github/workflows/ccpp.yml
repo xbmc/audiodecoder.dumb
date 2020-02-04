@@ -1,16 +1,24 @@
 name: audiodecoder.dumb build
 
-env:
-  addon: audiodecoder.dumb
-
 on:
   pull_request
 
 jobs:
   build:
     name: Windows
-    runs-on: windows-2019
-    
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: windows-2019
+        ARCHITECTURE: [Win32, x64, ARM, ARM64]
+        SYSTEM_NAME: [Windows, WindowsStore]
+        exclude:
+          - SYSTEM_NAME: Windows
+            ARCHITECTURE: ARM
+          - SYSTEM_NAME: Windows
+            ARCHITECTURE: ARM64
+
     steps:
     - uses: actions/checkout@v2
     - run: |
@@ -21,3 +29,7 @@ jobs:
         mkdir "definition/$addon"
         echo ---> $addon
         echo $addon . . > definition/$addon/$addon.txt
+        env:
+          addon: audiodecoder.dumb
+          GENERATOR: "Visual Studio 15 2017"
+          SYSTEM_VERSION: "10.0.17763.0"
