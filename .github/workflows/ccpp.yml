@@ -7,10 +7,6 @@ jobs:
   build:
     name: Windows
     runs-on: windows-2019
-    env:
-      addon: audiodecoder.dumb
-      GENERATOR: "Visual Studio 15 2017"
-      SYSTEM_VERSION: "10.0.17763.0"
 
     strategy:
       matrix:
@@ -23,12 +19,16 @@ jobs:
             ARCHITECTURE: ARM64
 
     steps:
-    - uses: actions/checkout@v2
-    - run: |
+    - name: Create addon
+      env:
+        ADDON: audiodecoder.dumb
+        GENERATOR: "Visual Studio 15 2017"
+        SYSTEM_VERSION: "10.0.17763.0"
+      run: |
         git clone --branch master --depth=1 https://github.com/xbmc/xbmc.git kodi
         cd $addon
         mkdir build
         cd build
-        mkdir "definition/$addon"
-        echo ---> $addon
-        echo $addon . . > definition/$addon/$addon.txt
+        mkdir "definition/$ADDON"
+        echo ---> $ADDON
+        echo $ADDON . . > definition/$ADDON/$ADDON.txt
