@@ -6,11 +6,10 @@ on:
 jobs:
   build:
     name: Windows
-    runs-on: ${{ matrix.os }}
+    runs-on: windows-2019
 
     strategy:
       matrix:
-        os: windows-2019
         ARCHITECTURE: [Win32, x64, ARM, ARM64]
         SYSTEM_NAME: [Windows, WindowsStore]
         exclude:
