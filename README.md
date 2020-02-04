@@ -3,7 +3,7 @@
 This is a [Kodi](https://kodi.tv) audio decoder addon for IT, XM and S3M files.
 
 [![Build Status](https://travis-ci.org/xbmc/audiodecoder.dumb.svg?branch=Matrix)](https://travis-ci.org/xbmc/audiodecoder.dumb/branches)
-[![Build Status](https://dev.azure.com/alwinus/binary-addons/_apis/build/status/xbmc.audiodecoder.dumb?branchName=Matrix)](https://dev.azure.com/alwinus/binary-addons/_build/latest?definitionId=3&branchName=Matrix)
+[![Build Status](https://dev.azure.com/teamkodi/binary-addons/_apis/build/status/xbmc.audiodecoder.dumb?branchName=Matrix)](https://dev.azure.com/teamkodi/binary-addons/_build/latest?definitionId=1&branchName=Matrix)
 <!--- [![Build Status](https://ci.appveyor.com/api/projects/status/github/xbmc/audiodecoder.dumb?branch=Matrix&svg=true)](https://ci.appveyor.com/project/xbmc/audiodecoder-dumb?branch=Matrix) -->
 
 ## Build instructions
