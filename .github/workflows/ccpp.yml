@@ -15,5 +15,8 @@ jobs:
         MIDDLE_NAME: The
         LAST_NAME: Octocat
       run: |
-        echo %MY_VAR% %FIRST_NAME% %MIDDLE_NAME% %LAST_NAME%.
+        echo ${MY_VAR} 
+        echo %FIRST_NAME%
+        echo ${{ MIDDLE_NAME }}
+        echo $(LAST_NAME).
 
