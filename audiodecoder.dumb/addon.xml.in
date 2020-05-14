@@ -19,7 +19,7 @@ On Kodi Supports playback of the following module formats:
 - XM (Fasttracker II)
 - S3M (Scream Tracker 3)</description>
     <platform>@PLATFORM@</platform>
-    <license>GPL-2.0</license>
+    <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/audiodecoder.dumb</source>
     <assets>
       <icon>icon.png</icon>
