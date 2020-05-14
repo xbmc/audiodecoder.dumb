@@ -11,8 +11,8 @@
     extension=".it|.xm|.s3m"
     library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Dynamic Universal Music Bibliotheque</summary>
-    <description lang="en">DUMB is a module audio renderer library. It reads module files and outputs audio that can be dumped to the actual audio playback library.
+    <summary lang="en_GB">Dynamic Universal Music Bibliotheque</summary>
+    <description lang="en_GB">DUMB is a module audio renderer library. It reads module files and outputs audio that can be dumped to the actual audio playback library.
 
 On Kodi Supports playback of the following module formats:
 - IT (Impulse Tracker)
