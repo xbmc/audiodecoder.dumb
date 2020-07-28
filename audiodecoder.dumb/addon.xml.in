@@ -25,6 +25,8 @@ On Kodi Supports playback of the following module formats:
 - IT (Impulse Tracker)
 - XM (Fasttracker II)
 - S3M (Scream Tracker 3)</description>
+    <disclaimer lang="de_DE">Es wird empfohlen, anstelle dieses Addons "OpenMPT Audio Decoder" zu verwenden.</disclaimer>
+    <disclaimer lang="en_GB">It is recommended to use "OpenMPT Audio Decoder" addon instead of this one.</disclaimer>
     <platform>@PLATFORM@</platform>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/audiodecoder.dumb</source>
