@@ -25,7 +25,7 @@ struct dumbfile_mem_status
   }
 };
 
-static int dumbfile_mem_skip(void * f, long n)
+static int dumbfile_mem_skip(void * f, dumb_off_t n)
 {
   dumbfile_mem_status * s = (dumbfile_mem_status *) f;
   s->offset += n;
@@ -48,10 +48,10 @@ static int dumbfile_mem_getc(void * f)
   return -1;
 }
 
-static long dumbfile_mem_getnc(char * ptr, long n, void * f)
+static dumb_ssize_t dumbfile_mem_getnc(char * ptr, size_t n, void * f)
 {
   dumbfile_mem_status * s = (dumbfile_mem_status *) f;
-  long max = s->size - s->offset;
+  size_t max = s->size - s->offset;
   if (max > n) max = n;
   if (max)
   {
@@ -61,7 +61,7 @@ static long dumbfile_mem_getnc(char * ptr, long n, void * f)
   return max;
 }
 
-static int dumbfile_mem_seek(void * f, long n)
+static int dumbfile_mem_seek(void * f, dumb_off_t n)
 {
   dumbfile_mem_status * s = (dumbfile_mem_status *) f;
   if ( n < 0 || n > s->size ) return -1;
@@ -69,7 +69,7 @@ static int dumbfile_mem_seek(void * f, long n)
   return 0;
 }
 
-static long dumbfile_mem_get_size(void * f)
+static dumb_off_t dumbfile_mem_get_size(void * f)
 {
   dumbfile_mem_status * s = (dumbfile_mem_status *) f;
   return s->size;
@@ -91,16 +91,19 @@ class ATTRIBUTE_HIDDEN CDumbCodec : public kodi::addon::CInstanceAudioDecoder
 {
 public:
   CDumbCodec(KODI_HANDLE instance, const std::string& version) :
-    CInstanceAudioDecoder(instance, version), sr(nullptr), module(nullptr)
+    CInstanceAudioDecoder(instance, version)
   {
   }
 
   virtual ~CDumbCodec()
   {
-    if (sr)
-      duh_end_sigrenderer(sr);
-    if (module)
-      unload_duh(module);
+    // Free up resources and exit.
+    if (m_sigSamples)
+      destroy_sample_buffer(m_sigSamples);
+    if (m_renderer)
+      duh_end_sigrenderer(m_renderer);
+    if (m_module)
+      unload_duh(m_module);
   }
 
   bool Init(const std::string& filename, unsigned int filecache,
@@ -126,56 +129,48 @@ public:
       return false;
     }
 
-    if (memdata.size >= 4 &&
-        memdata.ptr[0] == 'I' && memdata.ptr[1] == 'M' &&
-        memdata.ptr[2] == 'P' && memdata.ptr[3] == 'M')
-    {
-      module = dumb_read_it(f);
-    }
-    else if (memdata.size >= 17 &&
-        memcmp(memdata.ptr, "Extended Module: ", 17) == 0)
-    {
-      module = dumb_read_xm(f);
-    }
-    else if (memdata.size >= 0x30 &&
-        memdata.ptr[0x2C] == 'S' && memdata.ptr[0x2D] == 'C' &&
-        memdata.ptr[0x2E] == 'R' && memdata.ptr[0x2F] == 'M')
-    {
-      module = dumb_read_s3m(f);
-    }
-    else
-    {
-      dumbfile_close(f);
-      return false;
-    }
+    m_module = dumb_read_any(f, -1, -1);
 
     dumbfile_close(f);
+    if (!m_module)
+      return false;
 
-    sr = duh_start_sigrenderer(module, 0, 2, 0);
-
-    if (!sr)
+    m_renderer = duh_start_sigrenderer(m_module, 0, 2, 0);
+    if (!m_renderer)
       return false;
 
     channels = 2;
-    samplerate = 48000;
+    samplerate = m_samplerate;
     bitspersample = 16;
-    totaltime = duh_get_length(module)/65536*1000;
+    m_totaltime = totaltime = duh_get_length(m_module)/65536*1000;
     format = AUDIOENGINE_FMT_S16NE;
     channellist = { AUDIOENGINE_CH_FL, AUDIOENGINE_CH_FR };
 
-    bitrate = duh_sigrenderer_get_n_channels(sr);
-
+    bitrate = duh_sigrenderer_get_n_channels(m_renderer);
     return true;
   }
 
   int ReadPCM(uint8_t* buffer, int size, int& actualsize) override
   {
-    int rendered = duh_render(sr, 16, 0, 1.0,
-                              65536.0/48000.0,
-                              size/4,buffer);
-     actualsize = rendered*4;
+    // Read samples from libdumb save them to the SDL buffer. Note that we are
+    // reading SAMPLES, not bytes!
+    int r_samples = size / 4;
+    actualsize =
+        duh_render_int(m_renderer, &m_sigSamples,
+                       &m_sigSamplesSize, 16, 0,
+                       1.0f, 65536.0f/m_samplerate, r_samples, buffer) * 4;
 
-     return 0;
+    // Get current position from libdumb for the playback display. If we get
+    // position that is 0, it probably means that the song ended and
+    // duh_sigrenderer_get_position points to the start of the file.
+    m_position = duh_sigrenderer_get_position(m_renderer);
+    if (m_position == 0)
+      m_position = m_totaltime;
+
+    if (actualsize == 0)
+      return -1;
+
+    return 0;
   }
 
   int64_t Seek(int64_t time) override
@@ -184,10 +179,18 @@ public:
   }
 
 private:
-  DUH* module;
-  DUH_SIGRENDERER* sr;
+  DUH* m_module = nullptr;
+  DUH_SIGRENDERER* m_renderer = nullptr;
+
+  sample_t** m_sigSamples = nullptr;
+  long m_sigSamplesSize = 0;
+
+  int m_samplerate = 48000;
+  int64_t m_position; // Samples read
+  int64_t m_totaltime; // Total samples available
 };
 
+//------------------------------------------------------------------------------
 
 class ATTRIBUTE_HIDDEN CMyAddon : public kodi::addon::CAddonBase
 {

@@ -13,17 +13,14 @@
  *              an initial run-through.              |  \/ /\   /
  *                                                    \_  /  > /
  *                                                      | \ / /
- * By Chris Moeller.                                    |  ' /
+ * By Christopher Snowhill.                             |  ' /
  *                                                       \__/
  */
 
 #include "dumb.h"
 
-
-
-DUH *dumb_read_okt(DUMBFILE *f)
-{
-	DUH *duh = dumb_read_okt_quick(f);
-	dumb_it_do_initial_runthrough(duh);
-	return duh;
+DUH *dumb_read_okt(DUMBFILE *f) {
+    DUH *duh = dumb_read_okt_quick(f);
+    dumb_it_do_initial_runthrough(duh);
+    return duh;
 }
