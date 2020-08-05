@@ -15,6 +15,7 @@ include_directories(${KODI_INCLUDE_DIR}/..
                     ${DUMB_INCLUDE_DIRS})
 
 set(DUMB_SOURCES src/DumbCodec.cpp)
+set(DUMB_HEADERS src/DumbCodec.h)
 
 set(DEPLIBS ${DUMB_LIBRARIES})
 
