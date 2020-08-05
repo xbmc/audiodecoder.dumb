@@ -106,8 +106,8 @@ public:
   bool Init(const std::string& filename, unsigned int filecache,
             int& channels, int& samplerate,
             int& bitspersample, int64_t& totaltime,
-            int& bitrate, AEDataFormat& format,
-            std::vector<AEChannel>& channellist) override
+            int& bitrate, AudioEngineDataFormat& format,
+            std::vector<AudioEngineChannel>& channellist) override
   {
     kodi::vfs::CFile file;
     if (!file.OpenFile(filename,0))
@@ -160,8 +160,8 @@ public:
     samplerate = 48000;
     bitspersample = 16;
     totaltime = duh_get_length(module)/65536*1000;
-    format = AE_FMT_S16NE;
-    channellist = { AE_CH_FL, AE_CH_FR };
+    format = AUDIOENGINE_FMT_S16NE;
+    channellist = { AUDIOENGINE_CH_FL, AUDIOENGINE_CH_FR };
 
     bitrate = duh_sigrenderer_get_n_channels(sr);
 
