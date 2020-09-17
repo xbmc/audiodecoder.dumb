@@ -5,6 +5,11 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR})
 
 find_package(Kodi REQUIRED)
 
+if(NOT WIN32)
+  # For Dumb to define 64-bit-type for offsets
+  add_definitions(-DDUMB_OFF_T_CUSTOM=int64_t)
+endif()
+
 set(BUILD_EXAMPLES OFF CACHE BOOL "Build example binaries")
 set(BUILD_ALLEGRO4 OFF CACHE BOOL "Build Allegro4 support")
 add_subdirectory(lib/dumb)
