@@ -21,4 +21,8 @@ set(DEPLIBS ${DUMB_LIBRARIES})
 
 build_addon(audiodecoder.dumb DUMB DEPLIBS)
 
+if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
+  add_definitions(-D_FILE_OFFSET_BITS=64)
+endif()
+
 include(CPack)
