@@ -9,7 +9,7 @@ on:
 
 jobs:
   default:
-    if: github.repository == 'xbmc/audiodecoder.dump'
+    if: github.repository == 'xbmc/audiodecoder.dumb'
     runs-on: ubuntu-latest
 
     steps:
