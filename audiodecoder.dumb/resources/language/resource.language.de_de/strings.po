@@ -27,3 +27,7 @@ msgstr "DUMB ist eine Modul-Audio-Renderer-Bibliothek. Es liest Moduldateien und
 msgctxt "Addon Disclaimer"
 msgid "It is recommended to use \"OpenMPT Audio Decoder\" addon instead of this one."
 msgstr "Es wird empfohlen, anstelle dieses Addons \"OpenMPT Audio Decoder\" zu verwenden."
+
+msgctxt "Addon Lifecyclestate"
+msgid "Replaced by audiodecoder.openmpt addon! However, but still usable here."
+msgstr "Ersetzt durch das Addon audiodecoder.openmpt! Aber hier auch noch verwendbar."
