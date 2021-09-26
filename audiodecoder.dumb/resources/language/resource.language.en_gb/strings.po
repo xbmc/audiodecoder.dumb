@@ -27,3 +27,7 @@ msgstr ""
 msgctxt "Addon Disclaimer"
 msgid "It is recommended to use \"OpenMPT Audio Decoder\" addon instead of this one."
 msgstr ""
+
+msgctxt "Addon Lifecyclestate"
+msgid "Replaced by audiodecoder.openmpt addon! However, but still usable here."
+msgstr ""
