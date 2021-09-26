@@ -13,20 +13,10 @@
   <extension point="xbmc.addon.metadata">
     <summary lang="de_DE">Dynamic Universal Music Bibliotheque</summary>
     <summary lang="en_GB">Dynamic Universal Music Bibliotheque</summary>
-    <description lang="de_DE">DUMB ist eine Modul-Audio-Renderer-Bibliothek. Es liest Moduldateien und gibt zugehörigen Audiostream aus, das in die eigentliche Audiowiedergabebibliothek kopiert werden kann.
-
-An Kodi wird die Wiedergabe der folgenden Modulformate unterstützt:
-- IT (Impulse Tracker)
-- XM (Fasttracker II)
-- S3M (Scream Tracker 3)</description>
-    <description lang="en_GB">DUMB is a module audio renderer library. It reads module files and outputs audio that can be dumped to the actual audio playback library.
-
-On Kodi Supports playback of the following module formats:
-- IT (Impulse Tracker)
-- XM (Fasttracker II)
-- S3M (Scream Tracker 3)</description>
-    <disclaimer lang="de_DE">Es wird empfohlen, anstelle dieses Addons "OpenMPT Audio Decoder" zu verwenden.</disclaimer>
-    <disclaimer lang="en_GB">It is recommended to use "OpenMPT Audio Decoder" addon instead of this one.</disclaimer>
+    <description lang="de_DE">DUMB ist eine Modul-Audio-Renderer-Bibliothek. Es liest Moduldateien und gibt zugehörigen Audiostream aus, das in die eigentliche Audiowiedergabebibliothek kopiert werden kann.[CR][CR]An Kodi wird die Wiedergabe der folgenden Modulformate unterstützt:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)</description>
+    <description lang="en_GB">DUMB is a module audio renderer library. It reads module files and outputs audio that can be dumped to the actual audio playback library.[CR][CR]On Kodi Supports playback of the following module formats:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)</description>
+    <disclaimer lang="de_DE">Es wird empfohlen, anstelle dieses Addons &quot;OpenMPT Audio Decoder&quot; zu verwenden.</disclaimer>
+    <disclaimer lang="en_GB">It is recommended to use &quot;OpenMPT Audio Decoder&quot; addon instead of this one.</disclaimer>
     <lifecyclestate type="deprecated" lang="de_DE">Ersetzt durch das Addon audiodecoder.openmpt! Aber hier auch noch verwendbar.</lifecyclestate>
     <lifecyclestate type="deprecated" lang="en_GB">Replaced by audiodecoder.openmpt addon! However, but still usable here.</lifecyclestate>
     <platform>@PLATFORM@</platform>
