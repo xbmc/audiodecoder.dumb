@@ -11,6 +11,12 @@
     extension=".it|.xm|.s3m"
     library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
+    <platform>@PLATFORM@</platform>
+    <license>GPL-2.0-or-later</license>
+    <source>https://github.com/xbmc/audiodecoder.dumb</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
     <summary lang="de_DE">Dynamic Universal Music Bibliotheque</summary>
     <summary lang="en_GB">Dynamic Universal Music Bibliotheque</summary>
     <description lang="de_DE">DUMB ist eine Modul-Audio-Renderer-Bibliothek. Es liest Moduldateien und gibt zugehörigen Audiostream aus, das in die eigentliche Audiowiedergabebibliothek kopiert werden kann.[CR][CR]An Kodi wird die Wiedergabe der folgenden Modulformate unterstützt:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)</description>
@@ -19,11 +25,5 @@
     <disclaimer lang="en_GB">It is recommended to use &quot;OpenMPT Audio Decoder&quot; addon instead of this one.</disclaimer>
     <lifecyclestate type="deprecated" lang="de_DE">Ersetzt durch das Addon audiodecoder.openmpt! Aber hier auch noch verwendbar.</lifecyclestate>
     <lifecyclestate type="deprecated" lang="en_GB">Replaced by audiodecoder.openmpt addon! However, but still usable here.</lifecyclestate>
-    <platform>@PLATFORM@</platform>
-    <license>GPL-2.0-or-later</license>
-    <source>https://github.com/xbmc/audiodecoder.dumb</source>
-    <assets>
-      <icon>icon.png</icon>
-    </assets>
   </extension>
 </addon>
