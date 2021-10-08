@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-10-03 11:47+0000\n"
+"PO-Revision-Date: 2021-10-08 14:30+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Danish <https://kodi.weblate.cloud/projects/kodi-add-ons-audio-decodersencoders/audiodecoder-dumb/da_dk/>\n"
 "Language: da_dk\n"
@@ -23,7 +23,7 @@ msgstr "Dynamic Universal Music Bibliotheque (dynamisk universel musikbibliotek)
 
 msgctxt "Addon Description"
 msgid "DUMB is a module audio renderer library. It reads module files and outputs audio that can be dumped to the actual audio playback library.[CR][CR]On Kodi Supports playback of the following module formats:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)"
-msgstr ""
+msgstr "DUMB er et bibliotek med lydgengivere. Den læser modulfiler og udsender lyd, der kan dumpes til det faktiske lydafspilningsbibliotek.[CR][CR]Kodi understøtter afspilning af følgende modulformater:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)"
 
 msgctxt "Addon Disclaimer"
 msgid "It is recommended to use \"OpenMPT Audio Decoder\" addon instead of this one."
