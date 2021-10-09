@@ -23,6 +23,7 @@
     <summary lang="ko_KR">Dynamic Universal Music Bibliotheque</summary>
     <summary lang="ru_RU">DUMB – Dynamic Universal Music Bibliotheque</summary>
     <summary lang="zh_CN">动态通用音乐库（Dynamic Universal Music Bibliotheque）</summary>
+    <description lang="da_DK">DUMB er et bibliotek med lydgengivere. Den læser modulfiler og udsender lyd, der kan dumpes til det faktiske lydafspilningsbibliotek.[CR][CR]Kodi understøtter afspilning af følgende modulformater:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)</description>
     <description lang="de_DE">DUMB ist eine Modul-Audio-Renderer-Bibliothek. Es liest Moduldateien und gibt zugehörigen Audiostream aus, das in die eigentliche Audiowiedergabebibliothek kopiert werden kann.[CR][CR]An Kodi wird die Wiedergabe der folgenden Modulformate unterstützt:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)</description>
     <description lang="en_GB">DUMB is a module audio renderer library. It reads module files and outputs audio that can be dumped to the actual audio playback library.[CR][CR]On Kodi Supports playback of the following module formats:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)</description>
     <description lang="ko_KR">DUMB는 모듈 오디오 렌더러 라이브러리입니다. 모듈 파일을 읽고 실제 오디오 재생 라이브러리에 덤프할 수 있는 오디오를 출력합니다.[CR][CR]Kodi에서 다음 모듈 형식의 재생을 지원합니다.[CR]- IT(Impulse Tracker)[CR]- XM(Fasttracker II)[CR]- S3M(Stream Tracker 3)</description>
