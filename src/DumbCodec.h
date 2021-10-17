@@ -15,7 +15,7 @@ extern "C"
 #include <dumb.h>
 } /* extern "C" */
 
-class ATTRIBUTE_HIDDEN CDumbCodec : public kodi::addon::CInstanceAudioDecoder
+class ATTR_DLL_LOCAL CDumbCodec : public kodi::addon::CInstanceAudioDecoder
 {
 public:
   CDumbCodec(KODI_HANDLE instance, const std::string& version);
@@ -30,7 +30,7 @@ public:
             int& bitrate,
             AudioEngineDataFormat& format,
             std::vector<AudioEngineChannel>& channellist) override;
-  int ReadPCM(uint8_t* buffer, int size, int& actualsize) override;
+  int ReadPCM(uint8_t* buffer, size_t size, size_t& actualsize) override;
   int64_t Seek(int64_t time) override;
 
 private:

@@ -8,8 +8,19 @@
   <extension
     point="kodi.audiodecoder"
     name="dumb"
-    extension=".it|.xm|.s3m"
-    library_@PLATFORM@="@LIBRARY_FILENAME@"/>
+    library_@PLATFORM@="@LIBRARY_FILENAME@">
+    <support>
+      <extension name=".it">
+        <description>30100</description>
+      </extension>
+      <extension name=".xm">
+        <description>30101</description>
+      </extension>
+      <extension name=".s3m">
+        <description>30102</description>
+      </extension>
+    </support>
+  </extension>
   <extension point="xbmc.addon.metadata">
     <platform>@PLATFORM@</platform>
     <license>GPL-2.0-or-later</license>

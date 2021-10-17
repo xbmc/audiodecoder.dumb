@@ -31,3 +31,21 @@ msgstr ""
 msgctxt "Addon Lifecyclestate"
 msgid "Replaced by audiodecoder.openmpt addon! However, but still usable here."
 msgstr ""
+
+#. Supported file extension description about ".it"
+#: audiodecoder.dumb/addon.xml.in
+msgctxt "#30100"
+msgid "Music module created by Impulse Tracker, an audio tracking program."
+msgstr ""
+
+#. Supported file extension description about ".xm"
+#: audiodecoder.dumb/addon.xml.in
+msgctxt "#30101"
+msgid "Music module created by Fasttracker 2, an audio tracker program."
+msgstr ""
+
+#. Supported file extension description about ".s3m"
+#: audiodecoder.dumb/addon.xml.in
+msgctxt "#30102"
+msgid "Audio module format used by Scream Tracker 3.0 and later."
+msgstr ""
