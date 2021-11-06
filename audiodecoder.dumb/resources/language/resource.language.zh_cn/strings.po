@@ -5,47 +5,30 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: https://github.com/xbmc/audiodecoder.dumb/issues/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kodi Translation Team\n"
-"Language-Team: (https://kodi.weblate.cloud/languages/en_gb/)\n"
+"PO-Revision-Date: 2021-10-03 11:47+0000\n"
+"Last-Translator: taxigps <taxigps@sina.com>\n"
+"Language-Team: Chinese (China) <https://kodi.weblate.cloud/projects/kodi-add-ons-audio-decodersencoders/audiodecoder-dumb/zh_cn/>\n"
+"Language: zh_cn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en_GB\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.8\n"
 
 msgctxt "Addon Summary"
 msgid "Dynamic Universal Music Bibliotheque"
-msgstr ""
+msgstr "动态通用音乐库（Dynamic Universal Music Bibliotheque）"
 
 msgctxt "Addon Description"
 msgid "DUMB is a module audio renderer library. It reads module files and outputs audio that can be dumped to the actual audio playback library.[CR][CR]On Kodi Supports playback of the following module formats:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)"
-msgstr ""
+msgstr "DUMB 是一个模块音频渲染器库。它读取模块文件并输出可转储到实际音频播放库的音频。[CR][CR]在 Kodi 下支持以下模块格式的播放：[CR]- IT（Impulse Tracker）[CR]- XM（Fasttracker II）[CR]- S3M（Scream Tracker 3）"
 
 msgctxt "Addon Disclaimer"
 msgid "It is recommended to use \"OpenMPT Audio Decoder\" addon instead of this one."
-msgstr ""
+msgstr "建议使用“OpenMPT 音频解码器”插件代替此插件。"
 
 msgctxt "Addon Lifecyclestate"
 msgid "Replaced by audiodecoder.openmpt addon! However, but still usable here."
-msgstr ""
-
-#. Supported file extension description about ".it"
-#: audiodecoder.dumb/addon.xml.in
-msgctxt "#30100"
-msgid "Music module created by Impulse Tracker, an audio tracking program."
-msgstr ""
-
-#. Supported file extension description about ".xm"
-#: audiodecoder.dumb/addon.xml.in
-msgctxt "#30101"
-msgid "Music module created by Fasttracker 2, an audio tracker program."
-msgstr ""
-
-#. Supported file extension description about ".s3m"
-#: audiodecoder.dumb/addon.xml.in
-msgctxt "#30102"
-msgid "Audio module format used by Scream Tracker 3.0 and later."
-msgstr ""
+msgstr "替换为 audiodecoder.openmpt 插件！但是，在这里仍然可用。"

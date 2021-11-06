@@ -152,7 +152,7 @@ bool CDumbCodec::Init(const std::string& filename,
   return true;
 }
 
-int CDumbCodec::ReadPCM(uint8_t* buffer, int size, int& actualsize)
+int CDumbCodec::ReadPCM(uint8_t* buffer, size_t size, size_t& actualsize)
 {
   // Read samples from libdumb save them to the SDL buffer. Note that we are
   // reading SAMPLES, not bytes!
@@ -169,9 +169,9 @@ int CDumbCodec::ReadPCM(uint8_t* buffer, int size, int& actualsize)
     m_position = m_totaltime;
 
   if (actualsize == 0)
-    return -1;
+    return AUDIODECODER_READ_EOF;
 
-  return 0;
+  return AUDIODECODER_READ_SUCCESS;
 }
 
 int64_t CDumbCodec::Seek(int64_t time)
@@ -181,7 +181,7 @@ int64_t CDumbCodec::Seek(int64_t time)
 
 //------------------------------------------------------------------------------
 
-class ATTRIBUTE_HIDDEN CMyAddon : public kodi::addon::CAddonBase
+class ATTR_DLL_LOCAL CMyAddon : public kodi::addon::CAddonBase
 {
 public:
   CMyAddon() = default;
