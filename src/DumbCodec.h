@@ -18,7 +18,7 @@ extern "C"
 class ATTR_DLL_LOCAL CDumbCodec : public kodi::addon::CInstanceAudioDecoder
 {
 public:
-  CDumbCodec(KODI_HANDLE instance, const std::string& version);
+  CDumbCodec(const kodi::addon::IInstanceInfo& instance);
   virtual ~CDumbCodec();
 
   bool Init(const std::string& filename,
