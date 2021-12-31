@@ -88,8 +88,7 @@ extern "C"
 
 //------------------------------------------------------------------------------
 
-CDumbCodec::CDumbCodec(KODI_HANDLE instance, const std::string& version)
-  : CInstanceAudioDecoder(instance, version)
+CDumbCodec::CDumbCodec(const kodi::addon::IInstanceInfo& instance) : CInstanceAudioDecoder(instance)
 {
 }
 
@@ -185,13 +184,10 @@ class ATTR_DLL_LOCAL CMyAddon : public kodi::addon::CAddonBase
 {
 public:
   CMyAddon() = default;
-  ADDON_STATUS CreateInstance(int instanceType,
-                              const std::string& instanceID,
-                              KODI_HANDLE instance,
-                              const std::string& version,
-                              KODI_HANDLE& addonInstance) override
+  ADDON_STATUS CreateInstance(const kodi::addon::IInstanceInfo& instance,
+                              KODI_ADDON_INSTANCE_HDL& hdl) override
   {
-    addonInstance = new CDumbCodec(instance, version);
+    hdl = new CDumbCodec(instance);
     return ADDON_STATUS_OK;
   }
   virtual ~CMyAddon() = default;
