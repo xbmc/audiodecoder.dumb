@@ -36,6 +36,7 @@
     <description lang="ko_KR">DUMB는 모듈 오디오 렌더러 라이브러리입니다. 모듈 파일을 읽고 실제 오디오 재생 라이브러리에 덤프할 수 있는 오디오를 출력합니다.[CR][CR]Kodi에서 다음 모듈 형식의 재생을 지원합니다.[CR]- IT(Impulse Tracker)[CR]- XM(Fasttracker II)[CR]- S3M(Stream Tracker 3)</description>
     <description lang="pl_PL">DUMB to modułowa biblioteka renderująca dźwięk. Czyta pliki modułów i wysyła dźwięk, który można zrzucić do rzeczywistej biblioteki odtwarzania dźwięku.[CR][CR]W Kodi obsługuje odtwarzanie następujących formatów modułów:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)</description>
     <description lang="ru_RU">DUMB - это библиотека рендеринга звука модуля. Она читает файлы модулей и выводит аудио, которое может быть передано в библиотеку воспроизведения аудио.[CR][CR]Kodi поддерживает воспроизведение следующих форматов модулей:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)</description>
+    <description lang="sk_SK">DUMB je knižnica modulov pre renderovanie zvuku. Číta súbory modulov a výstup zvuku, ktorý možno uložiť do aktuálnej knižnice prehrávania zvuku.[CR][CR]Na Kodi Podporuje prehrávanie nasledujúcich formátov modulov:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)</description>
     <description lang="zh_CN">DUMB 是一个模块音频渲染器库。它读取模块文件并输出可转储到实际音频播放库的音频。[CR][CR]在 Kodi 下支持以下模块格式的播放：[CR]- IT（Impulse Tracker）[CR]- XM（Fasttracker II）[CR]- S3M（Scream Tracker 3）</description>
     <disclaimer lang="da_DK">Det anbefales at bruge &quot;OpenMPT Audio Decoder&quot; i stedet for denne.</disclaimer>
     <disclaimer lang="de_DE">Es wird empfohlen, anstelle dieses Addons &quot;OpenMPT Audio Decoder&quot; zu verwenden.</disclaimer>
@@ -46,6 +47,7 @@
     <disclaimer lang="ko_KR">이 애드온 대신 &quot;OpenMPT 오디오 디코더&quot; 애드온을 사용하는 것이 좋습니다.</disclaimer>
     <disclaimer lang="pl_PL">Zaleca się użycie dodatku &quot;Dekoder dźwięku OpenMPT&quot; zamiast tego.</disclaimer>
     <disclaimer lang="ru_RU">Вместо него рекомендуется использовать дополнение &quot;OpenMPT Audio Decoder&quot;.</disclaimer>
+    <disclaimer lang="sk_SK">Namiesto tohto sa odporúča použiť doplnok &quot;OpenMPT Audio Decoder&quot;.</disclaimer>
     <disclaimer lang="zh_CN">建议使用“OpenMPT 音频解码器”插件代替此插件。</disclaimer>
     <lifecyclestate type="deprecated" lang="da_DK">Erstattet af audiodecoder.openmpt addon! Dette addon er dog stadig brugbart.</lifecyclestate>
     <lifecyclestate type="deprecated" lang="de_DE">Ersetzt durch das Addon audiodecoder.openmpt! Aber hier auch noch verwendbar.</lifecyclestate>
@@ -56,6 +58,7 @@
     <lifecyclestate type="deprecated" lang="ko_KR">audiodecoder.openmpt 애드온으로 대체되었습니다! 하지만 아직 여기에서도 사용할 수 있습니다.</lifecyclestate>
     <lifecyclestate type="deprecated" lang="pl_PL">Zastąpiony przez dodatek audiodecoder.openmpt! Jednak nadal jest tutaj użyteczny.</lifecyclestate>
     <lifecyclestate type="deprecated" lang="ru_RU">Заменен дополнением audiodecoder.openmpt! Но его ещё можно использовать здесь.</lifecyclestate>
+    <lifecyclestate type="deprecated" lang="sk_SK">Nahradené doplnkom audiodecoder.openmpt ! Tu však stále použiteľné.</lifecyclestate>
     <lifecyclestate type="deprecated" lang="zh_CN">替换为 audiodecoder.openmpt 插件！但是，在这里仍然可用。</lifecyclestate>
   </extension>
 </addon>
