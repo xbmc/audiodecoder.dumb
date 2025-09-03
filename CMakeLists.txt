@@ -28,6 +28,8 @@ build_addon(audiodecoder.dumb DUMB DEPLIBS)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
   add_definitions(-D_FILE_OFFSET_BITS=64)
+elseif(CMAKE_SYSTEM_NAME STREQUAL "WindowsStore")
+  target_link_options(audiodecoder.dumb PRIVATE "/NODEFAULTLIB:libcmt")
 endif()
 
 include(CPack)
