@@ -30,6 +30,7 @@
     </assets>
     <summary lang="bs_BA">Dinamična univerzalna muzička biblioteka</summary>
     <summary lang="ca_ES">Biblioteca de música universal dinàmica (Dynamic Universal Music Bibliotheque)</summary>
+    <summary lang="cs_CZ">Dynamic Universal Music Bibliotheque</summary>
     <summary lang="da_DK">Dynamic Universal Music Bibliotheque (dynamisk universel musikbibliotek)</summary>
     <summary lang="de_DE">Dynamische universelle Musikbibliothek</summary>
     <summary lang="en_GB">Dynamic Universal Music Bibliotheque</summary>
@@ -49,6 +50,7 @@
     <summary lang="zh_CN">动态通用音乐库（Dynamic Universal Music Bibliotheque）</summary>
     <description lang="bs_BA">DUMB je biblioteka za renderiranje zvuka modula. Čita datoteke modula i reproducira zvuk koji se može prenijeti u stvarnu biblioteku za reprodukciju zvuka.[CR][CR]Na Kodiju podržava reprodukciju sljedećih formata modula:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)</description>
     <description lang="ca_ES">DUMB és una biblioteca renderitzadora de mòduls d&apos;àudio. Llegeix fitxers de mòduls i emet àudio que es pot bolcar a la biblioteca de reproducció d&apos;àudio real.[CR][CR]A Kodi admet la reproducció dels formats de mòduls següents:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)</description>
+    <description lang="cs_CZ">DUMB je knihovna pro renderování zvuku z modulů. Čte soubory modulů a vytváří zvuk, který lze předat skutečné knihovně pro přehrávání zvuku.[CR][CR]V Kodi podporuje přehrávání následujících formátů modulů:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)</description>
     <description lang="da_DK">DUMB er et bibliotek med lydgengivere. Den læser modulfiler og udsender lyd, der kan dumpes til det faktiske lydafspilningsbibliotek.[CR][CR]Kodi understøtter afspilning af følgende modulformater:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)</description>
     <description lang="de_DE">DUMB ist eine Modul-Audio-Renderer-Bibliothek. Es liest Moduldateien und gibt zugehörigen Audiostream aus, das in die eigentliche Audiowiedergabebibliothek kopiert werden kann.[CR][CR]An Kodi wird die Wiedergabe der folgenden Modulformate unterstützt:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)</description>
     <description lang="en_GB">DUMB is a module audio renderer library. It reads module files and outputs audio that can be dumped to the actual audio playback library.[CR][CR]On Kodi Supports playback of the following module formats:[CR]- IT (Impulse Tracker)[CR]- XM (Fasttracker II)[CR]- S3M (Scream Tracker 3)</description>
@@ -68,6 +70,7 @@
     <description lang="zh_CN">DUMB 是一个模块音频渲染器库。它读取模块文件并输出可转储到实际音频播放库的音频。[CR][CR]在 Kodi 下支持以下模块格式的播放：[CR]- IT（Impulse Tracker）[CR]- XM（Fasttracker II）[CR]- S3M（Scream Tracker 3）</description>
     <disclaimer lang="bs_BA">Preporučuje se korištenje dodatka &quot;OpenMPT Audio Decoder&quot; umjesto ovog.</disclaimer>
     <disclaimer lang="ca_ES">Es recomana utilitzar el complement &quot;OpenMPT Audio Decoder&quot; en lloc d&apos;aquest.</disclaimer>
+    <disclaimer lang="cs_CZ">Doporučuje se místo tohoto doplňku používat doplněk „OpenMPT Audio Decoder“.</disclaimer>
     <disclaimer lang="da_DK">Det anbefales at bruge &quot;OpenMPT Audio Decoder&quot; i stedet for denne.</disclaimer>
     <disclaimer lang="de_DE">Es wird empfohlen, anstelle dieses Addons &quot;OpenMPT Audio Decoder&quot; zu verwenden.</disclaimer>
     <disclaimer lang="en_GB">It is recommended to use &quot;OpenMPT Audio Decoder&quot; addon instead of this one.</disclaimer>
@@ -87,6 +90,7 @@
     <disclaimer lang="zh_CN">建议使用“OpenMPT 音频解码器”插件代替此插件。</disclaimer>
     <lifecyclestate type="deprecated" lang="bs_BA">Zamijenjeno dodatkom audiodecoder.openmpt! Međutim, i dalje se može koristiti ovdje.</lifecyclestate>
     <lifecyclestate type="deprecated" lang="ca_ES">Substituït pel complement audiodecoder.openmpt! Tanmateix, encara es pot utilitzar aquí.</lifecyclestate>
+    <lifecyclestate type="deprecated" lang="cs_CZ">Nahrazen doplňkem audiodecoder.openmpt! Přesto je zde stále použitelný.</lifecyclestate>
     <lifecyclestate type="deprecated" lang="da_DK">Erstattet af audiodecoder.openmpt addon! Dette addon er dog stadig brugbart.</lifecyclestate>
     <lifecyclestate type="deprecated" lang="de_DE">Ersetzt durch das Addon audiodecoder.openmpt! Aber hier auch noch verwendbar.</lifecyclestate>
     <lifecyclestate type="deprecated" lang="en_GB">Replaced by audiodecoder.openmpt addon! However, but still usable here.</lifecyclestate>
